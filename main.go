@@ -38,7 +38,7 @@ func main() {
 			return
 		}
 
-		e := Expense{Amount: 50, Category: "Dog"}
+		e := Expense{Amount: 50, Category: "food"}
 		fmt.Println("added:", e.Format())
 
 	case "list":
