@@ -66,7 +66,7 @@ func main() {
 			return
 		}
 
-		if amount < 0 {
+		if amount <= 0 {
 			fmt.Println("Invalid must be positive")
 			return
 		}
@@ -85,7 +85,6 @@ func main() {
 			return
 		}
 		fmt.Println("added", e.Format())
-		fmt.Printf("added : %.2f %s", amount, command[3])
 
 	case "transport":
 		if len(command) < 4 {
@@ -100,7 +99,7 @@ func main() {
 			return
 		}
 
-		if amount < 0 {
+		if amount <= 0 {
 			fmt.Println("Invalid must be positive")
 			return
 		}
@@ -119,8 +118,6 @@ func main() {
 			return
 		}
 		fmt.Println("added:", e.Format())
-
-		fmt.Printf("added : %.2f %s", amount, command[3])
 
 	case "list":
 		list, err := loadExpense()
@@ -147,6 +144,6 @@ func main() {
 		}
 		fmt.Printf("total : %.2f\n", sum)
 	default:
-		fmt.Println("unknow command")
+		fmt.Println("unknow command", command[1])
 	}
 }
