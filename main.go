@@ -6,6 +6,15 @@ import (
 	"strconv"
 )
 
+type Expense struct {
+	Amount   float64
+	Category string
+}
+
+func (e Expense) Format() string {
+	return fmt.Sprintf("%.2f %s", e.Amount, e.Category)
+}
+
 func main() {
 
 	if len(os.Args) < 2 {
@@ -28,7 +37,8 @@ func main() {
 			return
 		}
 
-		fmt.Printf("added: %.2f %s\n", amount, command[3])
+		e := Expense{Amount: 50, Category: "Dog"}
+		fmt.Println("added:", e.Format())
 
 	case "list":
 		fmt.Println("lits : (empty)")
