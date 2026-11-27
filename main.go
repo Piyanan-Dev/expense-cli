@@ -18,6 +18,7 @@ func (e Expense) Format() string {
 func main() {
 
 	if len(os.Args) < 2 {
+		fmt.Println("usage: add <amount> <category>")
 		return
 	}
 	command := os.Args
