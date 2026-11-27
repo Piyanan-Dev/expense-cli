@@ -1,0 +1,18 @@
+[
+  {
+    "Amount": 0,
+    "Category": "food"
+  },
+  {
+    "Amount": 50,
+    "Category": "food"
+  },
+  {
+    "Amount": 120,
+    "Category": "bus"
+  },
+  {
+    "Amount": 12.5,
+    "Category": "coffee"
+  }
+]
